@@ -360,7 +360,9 @@
 <script src="assets/js/jquery-3.6.0.js"></script>
 <script type="text/javascript">
 	$(document).ready(() => {
-		$('#spAge').html('28')
+		const year = 1997
+		var age = new Date().getFullYear() - year + 1
+		$('#spAge').html(age)
 	})
 </script>
 </body>
