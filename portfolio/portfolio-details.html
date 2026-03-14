@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>부산온나 | Project Details</title>
+  <meta content="부산온나 프로젝트 상세 설명. Spring MVC, JSP, MySQL, AJAX 기반 숙박 예약 플랫폼 프로젝트 포트폴리오." name="description">
+  <meta content="Spring MVC, JSP, MySQL, AJAX, 프로젝트 포트폴리오, 부산온나" name="keywords">
+
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Poppins:300,400,500,600,700" rel="stylesheet">
+
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#dfeaf7;
+      --panel:#f7fbff;
+      --panel-2:#eef5ff;
+      --line:#cfdceb;
+      --ink:#26384d;
+      --muted:#5b6d84;
+      --accent:#2c6dff;
+      --accent-soft:#dfeaff;
+      --shadow:0 18px 40px rgba(31,56,97,.10);
+      --radius:22px;
+    }
+    body{background:linear-gradient(180deg,#dfeaf7 0%,#e8f1fb 100%);color:var(--ink);}
+    #main{padding-top:48px;padding-bottom:56px;}
+    #portfolio-details{padding:0;background:transparent;}
+    .project-shell{max-width:1320px;margin:0 auto;padding:0 20px;}
+    .hero-card{background:linear-gradient(135deg,rgba(255,255,255,.72),rgba(244,249,255,.92));border:1px solid rgba(255,255,255,.7);border-radius:28px;box-shadow:var(--shadow);padding:34px 36px 28px;margin-bottom:28px;position:relative;overflow:hidden;}
+    .hero-card::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at top right,rgba(44,109,255,.10),transparent 35%),radial-gradient(circle at bottom left,rgba(77,187,234,.08),transparent 30%);pointer-events:none;}
+    .hero-top{position:relative;z-index:1;}
+    .project-kicker{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;background:var(--accent-soft);color:#2150b8;font-size:13px;font-weight:700;margin-bottom:16px;}
+    .section-title{margin-bottom:0;text-align:left;}
+    .section-title h2{font-size:42px;margin-bottom:10px;color:#203856;letter-spacing:-0.02em;}
+    .section-title p{font-size:16px;line-height:1.8;color:var(--muted);max-width:860px;margin:0;}
+    .hero-meta{margin-top:22px;display:flex;flex-wrap:wrap;gap:12px;}
+    .meta-pill{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.75);border:1px solid var(--line);color:#35506f;font-size:14px;font-weight:600;}
+    .content-grid{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(320px,.95fr);gap:24px;align-items:start;}
+    .showcase-card,.info-card,.doc-card,.text-card,.highlight-card{background:linear-gradient(180deg,var(--panel) 0%,var(--panel-2) 100%);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);}
+    .showcase-card{overflow:hidden;padding:18px;}
+    .showcase-header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px;}
+    .showcase-title{font-size:16px;font-weight:700;color:#29425f;margin:0;}
+    .showcase-sub{color:#70829a;font-size:13px;}
+    .device-frame{background:#ffffff;border:1px solid #d8e4f0;border-radius:20px;padding:14px;box-shadow:inset 0 1px 0 rgba(255,255,255,.9);}
+    .portfolio-details-slider img{width:100%;display:block;border-radius:16px;background:#fff;min-height:460px;object-fit:cover;}
+    .swiper-pagination{position:relative;margin-top:14px;}
+    .swiper-pagination-bullet{width:10px;height:10px;background:#a9c4f7;opacity:1;}
+    .swiper-pagination-bullet-active{width:28px;border-radius:999px;background:linear-gradient(90deg,#2c6dff 0%,#43b0ea 100%);}
+    .sidebar-stack{display:flex;flex-direction:column;gap:18px;}
+    .info-card,.doc-card,.text-card{padding:24px 24px 22px;}
+    .card-title{display:flex;align-items:center;gap:10px;margin:0 0 18px;font-size:24px;font-weight:700;color:#243a55;}
+    .icon-chip{width:36px;height:36px;border-radius:12px;background:var(--accent-soft);color:var(--accent);display:inline-flex;align-items:center;justify-content:center;font-size:18px;}
+    .info-list{list-style:none;margin:0;padding:0;display:grid;gap:14px;}
+    .info-list li{display:grid;grid-template-columns:92px 1fr;gap:12px;align-items:flex-start;font-size:15px;color:#3d526e;line-height:1.7;padding-bottom:12px;border-bottom:1px dashed #d6e2f0;}
+    .info-list li:last-child{border-bottom:none;padding-bottom:0;}
+    .info-list strong{color:#243a55;font-weight:700;}
+    .doc-links{display:grid;gap:10px;}
+    .doc-link{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;border-radius:14px;background:rgba(255,255,255,.75);border:1px solid #d6e2f0;color:#35527a;font-size:14px;font-weight:600;text-decoration:none;transition:.2s ease;}
+    .doc-link:hover{transform:translateY(-1px);background:#ffffff;color:#204fb6;}
+    .body-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;margin-top:24px;}
+    .text-card{height:100%;}
+    .text-card h3{margin:0 0 14px;font-size:26px;color:#243a55;letter-spacing:-0.02em;}
+    .text-card p{margin:0;color:#52657f;line-height:1.9;font-size:15px;}
+    .highlight-grid{margin-top:24px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;}
+    .highlight-card{padding:22px;}
+    .highlight-card h4{margin:0 0 8px;font-size:18px;color:#23446b;display:flex;align-items:center;gap:10px;}
+    .highlight-card p{margin:0;color:#566a83;line-height:1.75;font-size:14px;}
+    .comment-emphasis{margin-top:14px;padding:16px 18px;border-radius:16px;background:rgba(223,234,255,.8);border:1px solid #cad9f0;color:#36567d;font-size:14px;line-height:1.8;font-weight:600;}
+    @media (max-width:1199px){.content-grid{grid-template-columns:1fr;}.body-grid{grid-template-columns:1fr;}}
+    @media (max-width:767px){.hero-card{padding:24px 20px 22px;}.section-title h2{font-size:32px;}.highlight-grid{grid-template-columns:1fr;}.info-list li{grid-template-columns:1fr;gap:4px;}.portfolio-details-slider img{min-height:260px;}}
+  </style>
+</head>
+
+<body>
+  <main id="main">
+    <section id="portfolio-details" class="portfolio-details">
+      <div class="project-shell">
+        <div class="hero-card" data-aos="fade-up">
+          <div class="hero-top">
+            <div class="project-kicker"><i class="bi bi-stars"></i> Featured Team Project</div>
+            <div class="section-title">
+              <h2>부산온나</h2>
+              <p>숙소 검색부터 예약, 권한별 운영 기능까지 구현한 Spring MVC 기반 숙박 예약 플랫폼 프로젝트</p>
+            </div>
+            <div class="hero-meta">
+              <span class="meta-pill"><i class="bi bi-calendar4-week"></i> 2022.08 - 2022.09</span>
+              <span class="meta-pill"><i class="bi bi-people"></i> 팀 프로젝트</span>
+              <span class="meta-pill"><i class="bi bi-layers"></i> Spring MVC · JSP · MyBatis · MySQL</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-grid">
+          <div class="showcase-card" data-aos="fade-up" data-aos-delay="50">
+            <div class="showcase-header">
+              <div>
+                <p class="showcase-title">Project Preview</p>
+                <div class="showcase-sub">주요 화면 흐름과 사용자 경험을 확인할 수 있습니다.</div>
+              </div>
+              <div class="meta-pill"><i class="bi bi-images"></i> 3 Screens</div>
+            </div>
+            <div class="device-frame">
+              <div class="portfolio-details-slider swiper">
+                <div class="swiper-wrapper align-items-center">
+                  <div class="swiper-slide"><img src="assets/img/portfolio/busanOn_1.JPG" alt="부산온나 화면 1"></div>
+                  <div class="swiper-slide"><img src="assets/img/portfolio/busanOn_2.JPG" alt="부산온나 화면 2"></div>
+                  <div class="swiper-slide"><img src="assets/img/portfolio/busanOn_3.JPG" alt="부산온나 화면 3"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sidebar-stack">
+            <div class="info-card" data-aos="fade-up" data-aos-delay="100">
+              <h3 class="card-title"><span class="icon-chip"><i class="bi bi-card-checklist"></i></span> Project Information</h3>
+              <ul class="info-list">
+                <li><strong>Type</strong><span>팀 프로젝트 / 숙박 예약 웹 서비스</span></li>
+                <li><strong>Stack</strong><span>Java8, Spring MVC, MyBatis, JSP, MySQL, Bootstrap5, HTML/CSS, JavaScript, jQuery, AJAX</span></li>
+                <li><strong>Period</strong><span>2022.08 - 2022.09</span></li>
+                <li><strong>Focus</strong><span>권한 관리, 예약 흐름, 문의/리뷰, 이메일 인증, CRUD</span></li>
+                <li><strong>URL</strong><span><a href="http://slg1.cafe24.com" target="_blank">사이트 방문</a></span></li>
+              </ul>
+            </div>
+
+            <div class="doc-card" data-aos="fade-up" data-aos-delay="150">
+              <h3 class="card-title"><span class="icon-chip"><i class="bi bi-folder2-open"></i></span> Documents</h3>
+              <div class="doc-links">
+                <a class="doc-link" href="https://superficial-quarter-0c0.notion.site/1-f0d8633945804228a9d18b62771c8864" target="_blank"><span>프로젝트 회의록</span><i class="bi bi-arrow-up-right"></i></a>
+                <a class="doc-link" href="https://docs.google.com/spreadsheets/d/1rSoNqYHGq813FKCG74-hKGq3BbY7keib/edit?usp=sharing&ouid=106373043736332550179&rtpof=true&sd=true" target="_blank"><span>요구사항 정의서</span><i class="bi bi-arrow-up-right"></i></a>
+                <a class="doc-link" href="https://docs.google.com/spreadsheets/d/1_Fx9LY_GQf1dSQfeeyGFnDFIC69-O99L/edit?usp=sharing&ouid=106373043736332550179&rtpof=true&sd=true" target="_blank"><span>테이블 명세서</span><i class="bi bi-arrow-up-right"></i></a>
+                <a class="doc-link" href="https://docs.google.com/spreadsheets/d/15Ke6MmmokUm09CX4xZbQdvE8avzdmz8O/edit?usp=sharing&ouid=106373043736332550179&rtpof=true&sd=true" target="_blank"><span>테스트 케이스</span><i class="bi bi-arrow-up-right"></i></a>
+                <a class="doc-link" href="https://drive.google.com/file/d/1n46OFatUm0j7nbMEG4POXDP3Hre2CtKt/view?usp=sharing" target="_blank"><span>프로젝트 발표자료</span><i class="bi bi-arrow-up-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="body-grid">
+          <div class="text-card" data-aos="fade-up" data-aos-delay="200">
+            <h3>Overview</h3>
+            <p>
+              부산온나는 일반 회원, 숙소 업체, 관리자 세 가지 역할을 기준으로 기능을 분리한 숙박 예약 플랫폼입니다.
+              단순한 화면 구현이 아니라 회원 관리, 예약 흐름, 권한 제어, 문의/리뷰, 이메일 인증, 유효성 검증, 문서화까지
+              웹 서비스 제작 전 과정을 경험한 프로젝트입니다.
+            </p>
+          </div>
+
+          <div class="text-card" data-aos="fade-up" data-aos-delay="250">
+            <h3>Developer Comment</h3>
+            <p>
+              이 프로젝트는 웹 서비스의 기본기를 한 번에 경험하게 해준 작업이었습니다.
+              이후 실무에서 ASP.NET MVC, MSSQL, REST API, Vue.js 기반 프로젝트를 수행하면서도,
+              당시 익힌 권한 분리, 데이터 흐름, 유효성 검증, 문서화 경험이 계속 기반이 되었습니다.
+            </p>
+            <div class="comment-emphasis">
+              이후 기존 소스를 기반으로 SpringBoot 환경으로 마이그레이션을 진행하고 일부 기능 오류를 수정하여
+              Cafe24 실서버에 개인적으로 재배포하며 레거시 프로젝트를 최신 환경으로 개선하는 경험도 진행했습니다.
+            </div>
+          </div>
+        </div>
+
+        <div class="highlight-grid" data-aos="fade-up" data-aos-delay="300">
+          <div class="highlight-card">
+            <h4><span class="icon-chip"><i class="bi bi-diagram-3"></i></span> Architecture</h4>
+            <p>Spring MVC + JSP + MyBatis + MySQL 기반의 전형적인 서버 렌더링 구조로 화면, 비즈니스 로직, 데이터 계층을 분리했습니다.</p>
+          </div>
+          <div class="highlight-card">
+            <h4><span class="icon-chip"><i class="bi bi-shield-lock"></i></span> Role-based Access</h4>
+            <p>일반 회원, 숙소 업체, 관리자 권한을 분리하여 접근 가능한 기능과 운영 흐름을 구분했습니다.</p>
+          </div>
+          <div class="highlight-card">
+            <h4><span class="icon-chip"><i class="bi bi-check2-square"></i></span> Validation</h4>
+            <p>이메일 인증, 입력값 검증, 회원 등급별 기능 제어를 적용하며 서비스 운영에서 필요한 기본 검증 흐름을 구성했습니다.</p>
+          </div>
+          <div class="highlight-card">
+            <h4><span class="icon-chip"><i class="bi bi-lightning-charge"></i></span> AJAX & Documentation</h4>
+            <p>AJAX 기반 비동기 요청으로 UX를 개선하고 요구사항 정의서, 회의록, 테이블 명세서, 테스트 케이스를 정리했습니다.</p>
+          </div>
+          <div class="highlight-card">
+            <h4><span class="icon-chip"><i class="bi bi-gear"></i></span> What this project proves</h4>
+            <p>권한, 검증, CRUD, 화면-서버 연동, 문서화까지 웹 서비스 제작 전 과정을 경험하며 이후 실무 역량의 기반을 만든 프로젝트입니다.</p>
+          </div>
+          <div class="highlight-card">
+            <h4><span class="icon-chip"><i class="bi bi-arrow-repeat"></i></span> Modernization</h4>
+            <p>서비스 중단 이후 기존 소스를 기반으로 SpringBoot 마이그레이션과 실서버 재배포를 직접 진행하며 레거시 개선 경험까지 확장했습니다.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>
