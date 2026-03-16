@@ -199,20 +199,12 @@
   });
 
   /**
-   * Initiate portfolio lightbox 
+   * Initiate portfolio lightbox
    */
-  const portfolioLightbox = GLightbox({
-    selector: '.portfolio-lightbox'
-  });
-
-  /**
-   * Initiate portfolio details lightbox 
-   */
-  const portfolioDetailsLightbox = GLightbox({
-    selector: '.portfolio-details-lightbox',
-    width: '90%',
-    height: '90vh'
-  });
+  if (typeof GLightbox !== 'undefined') {
+    GLightbox({ selector: '.portfolio-lightbox' });
+    GLightbox({ selector: '.portfolio-details-lightbox', width: '90%', height: '90vh' });
+  }
 
   /**
    * Portfolio details slider
@@ -262,8 +254,41 @@
   });
 
   /**
-   * Initiate Pure Counter 
+   * Initiate Pure Counter
    */
-  new PureCounter();
+  if (typeof PureCounter !== 'undefined') {
+    new PureCounter();
+  }
+
+  /**
+   * Dark mode toggle
+   */
+  const themeToggle = select('#theme-toggle');
+  if (themeToggle) {
+    const icon = themeToggle.querySelector('i');
+
+    const applyDark = () => {
+      document.body.classList.add('dark-mode');
+      icon.classList.replace('bi-moon-stars-fill', 'bi-sun-fill');
+    };
+    const applyLight = () => {
+      document.body.classList.remove('dark-mode');
+      icon.classList.replace('bi-sun-fill', 'bi-moon-stars-fill');
+    };
+
+    if (localStorage.getItem('theme') === 'dark') {
+      applyDark();
+    }
+
+    themeToggle.addEventListener('click', () => {
+      if (document.body.classList.contains('dark-mode')) {
+        applyLight();
+        localStorage.setItem('theme', 'light');
+      } else {
+        applyDark();
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+  }
 
 })()

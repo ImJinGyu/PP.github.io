@@ -1843,3 +1843,331 @@ section{
 .career-story-box p:last-child{
   margin-bottom: 0;
 }
+
+/*--------------------------------------------------------------
+# Dark Mode Toggle Button
+--------------------------------------------------------------*/
+.theme-toggle {
+  position: fixed;
+  right: 15px;
+  bottom: 65px;
+  z-index: 996;
+  background: #0563bb;
+  color: #fff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  transition: all 0.4s;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.theme-toggle:hover {
+  background: #0678e3;
+}
+
+/*--------------------------------------------------------------
+# Dark Mode
+--------------------------------------------------------------*/
+body.dark-mode {
+  background: linear-gradient(180deg, #0c1426 0%, #111827 100%) !important;
+  color: #e2e8f0 !important;
+}
+
+body.dark-mode #preloader {
+  background: #0c1426 !important;
+}
+
+body.dark-mode #header {
+  background: linear-gradient(180deg, #020b18 0%, #040f22 100%) !important;
+}
+
+@media (max-width: 992px) {
+  body.dark-mode #header {
+    background: #040e1f !important;
+    border-right: 1px solid #1e293b !important;
+  }
+}
+
+body.dark-mode #header .nav-menu a,
+body.dark-mode #header .nav-menu a:focus {
+  background: #1e2d4a !important;
+  color: #cbd5e1 !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  box-shadow: none !important;
+}
+
+body.dark-mode #header .nav-menu a i,
+body.dark-mode #header .nav-menu a:focus i {
+  color: #94a3b8 !important;
+}
+
+body.dark-mode #header .nav-menu a:hover,
+body.dark-mode #header .nav-menu .active,
+body.dark-mode #header .nav-menu .active:focus,
+body.dark-mode #header .nav-menu li:hover > a {
+  background: var(--accent) !important;
+  color: #fff !important;
+}
+
+body.dark-mode .mobile-nav-toggle i {
+  color: #94a3b8;
+}
+
+body.dark-mode .mobile-nav-active .mobile-nav-toggle {
+  background-color: var(--accent) !important;
+}
+
+/* Hero */
+body.dark-mode #hero .container {
+  background: rgba(10, 18, 40, 0.88) !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+}
+
+body.dark-mode #hero h1,
+body.dark-mode #hero p,
+body.dark-mode #hero .typed,
+body.dark-mode #hero .typed-cursor {
+  color: #e2e8f0 !important;
+}
+
+body.dark-mode #hero p span {
+  color: #60a5fa !important;
+}
+
+body.dark-mode #hero .social-links a {
+  color: #94a3b8 !important;
+}
+
+body.dark-mode #hero .social-links a:hover {
+  color: #60a5fa !important;
+}
+
+body.dark-mode .hero-summary {
+  color: #94a3b8 !important;
+}
+
+/* Sections */
+body.dark-mode #about,
+body.dark-mode #resume,
+body.dark-mode #skills,
+body.dark-mode #projects,
+body.dark-mode #portfolio,
+body.dark-mode #contact {
+  background: #111827 !important;
+}
+
+body.dark-mode .section-soft {
+  background: linear-gradient(180deg, #111827 0%, #0f1e35 100%) !important;
+}
+
+body.dark-mode .section-soft-alt {
+  background: linear-gradient(180deg, #0f1e35 0%, #111827 100%) !important;
+}
+
+body.dark-mode .section-bg {
+  background: #0d1a2e !important;
+}
+
+body.dark-mode .section-title h2 {
+  color: #e2e8f0 !important;
+}
+
+body.dark-mode .section-title h2::before {
+  background: #2d3f5e !important;
+}
+
+body.dark-mode .section-title p {
+  color: #94a3b8 !important;
+}
+
+/* About */
+body.dark-mode .about .content {
+  background: #1e293b !important;
+  border: 1px solid #2d4a6e !important;
+}
+
+body.dark-mode .about .content h3 {
+  color: #93c5fd !important;
+}
+
+body.dark-mode .about .content ul li,
+body.dark-mode .about .content p {
+  color: #94a3b8 !important;
+}
+
+body.dark-mode .highlight-box {
+  background: #1a2744 !important;
+  border: 1px solid #2d4a6e !important;
+}
+
+body.dark-mode .highlight-box h4 {
+  color: #e2e8f0 !important;
+}
+
+body.dark-mode .compact-list li {
+  color: #94a3b8 !important;
+}
+
+/* Skill cards */
+body.dark-mode .skill-card {
+  background: #1e293b !important;
+  border: 1px solid #2d4a6e !important;
+}
+
+body.dark-mode .skill-card h4 {
+  color: #e2e8f0 !important;
+}
+
+body.dark-mode .skill-card p {
+  color: #94a3b8 !important;
+}
+
+/* Resume */
+body.dark-mode .resume-title {
+  color: #93c5fd !important;
+}
+
+body.dark-mode .resume .resume-item {
+  background: #1e293b !important;
+  border: 1px solid #2d4a6e !important;
+  border-left: 4px solid var(--accent) !important;
+}
+
+body.dark-mode .resume .resume-item::before {
+  background: #1e293b !important;
+  border: 3px solid var(--accent) !important;
+}
+
+body.dark-mode .resume .resume-item h4 {
+  color: #93c5fd !important;
+}
+
+body.dark-mode .resume .resume-item h5 {
+  background: #1a2e50 !important;
+  color: #93c5fd !important;
+  border: 1px solid #2d4a6e !important;
+}
+
+body.dark-mode .resume .resume-item p,
+body.dark-mode .resume .resume-item li,
+body.dark-mode .resume .resume-item em {
+  color: #94a3b8 !important;
+}
+
+body.dark-mode .career-story-box {
+  background: #172033 !important;
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.04) !important;
+}
+
+body.dark-mode .career-story-label {
+  background: #1e3a5c !important;
+  color: #93c5fd !important;
+}
+
+body.dark-mode .career-story-box p {
+  color: #94a3b8 !important;
+}
+
+/* Value / Info cards */
+body.dark-mode .value-card,
+body.dark-mode .info-box {
+  background: #1e293b !important;
+  border: 1px solid #2d4a6e !important;
+}
+
+body.dark-mode .value-card h4,
+body.dark-mode .info-box h3 {
+  color: #e2e8f0 !important;
+}
+
+body.dark-mode .value-card p,
+body.dark-mode .info-box p {
+  color: #94a3b8 !important;
+}
+
+/* Project cards */
+body.dark-mode .project-card,
+body.dark-mode .architecture-card,
+body.dark-mode .featured-project-panel {
+  background: #1e293b !important;
+  border: 1px solid #2d4a6e !important;
+}
+
+body.dark-mode .project-card h4 {
+  color: #93c5fd !important;
+}
+
+body.dark-mode .project-card p,
+body.dark-mode .project-card li,
+body.dark-mode .featured-project-panel p,
+body.dark-mode .featured-project-panel li {
+  color: #94a3b8 !important;
+}
+
+body.dark-mode .project-contribution {
+  background: linear-gradient(180deg, #1a2744 0%, #162040 100%) !important;
+  border: 1px solid #2d4a6e !important;
+}
+
+body.dark-mode .team-badge {
+  background: #1a2e50 !important;
+  color: #93c5fd !important;
+  border: 1px solid #2d4a6e !important;
+}
+
+body.dark-mode .role-badge {
+  background: #1e3a6e !important;
+  color: #60a5fa !important;
+  border: 1px solid #2d4a8a !important;
+}
+
+body.dark-mode .contribution-bar {
+  background: #1e3a5c !important;
+}
+
+body.dark-mode .contribution-note {
+  color: #94a3b8 !important;
+}
+
+/* Portfolio section */
+body.dark-mode .portfolio #portfolio-flters {
+  background: #1e293b !important;
+}
+
+body.dark-mode .portfolio #portfolio-flters li {
+  color: #94a3b8 !important;
+}
+
+body.dark-mode .portfolio #portfolio-flters li.filter-active,
+body.dark-mode .portfolio #portfolio-flters li:hover {
+  color: #60a5fa !important;
+}
+
+/* Links */
+body.dark-mode a {
+  color: #60a5fa !important;
+}
+
+body.dark-mode a:hover {
+  color: #93c5fd !important;
+}
+
+/* Footer */
+body.dark-mode #footer {
+  background: #040e1f !important;
+  color: #94a3b8 !important;
+}
+
+body.dark-mode #footer h3 {
+  color: #e2e8f0 !important;
+}
+
+body.dark-mode #footer p {
+  color: #64748b !important;
+}

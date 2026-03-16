@@ -81,6 +81,33 @@
     .comment-emphasis{margin-top:14px;padding:16px 18px;border-radius:16px;background:rgba(223,234,255,.8);border:1px solid #cad9f0;color:#36567d;font-size:14px;line-height:1.8;font-weight:600;}
     @media (max-width:1199px){.content-grid{grid-template-columns:1fr;}.body-grid{grid-template-columns:1fr;}}
     @media (max-width:767px){.hero-card{padding:24px 20px 22px;}.section-title h2{font-size:32px;}.highlight-grid{grid-template-columns:1fr;}.info-list li{grid-template-columns:1fr;gap:4px;}.portfolio-details-slider img{min-height:260px;}}
+
+    /* Dark mode overrides for details page */
+    body.dark-mode{background:linear-gradient(180deg,#0c1426 0%,#111827 100%)!important;color:#e2e8f0!important;}
+    body.dark-mode .hero-card{background:linear-gradient(135deg,rgba(20,35,65,.85),rgba(15,28,55,.92))!important;border-color:rgba(255,255,255,.08)!important;}
+    body.dark-mode .showcase-card,
+    body.dark-mode .info-card,
+    body.dark-mode .doc-card,
+    body.dark-mode .text-card,
+    body.dark-mode .highlight-card{background:linear-gradient(180deg,#1e293b 0%,#1a2540 100%)!important;border-color:#2d4a6e!important;}
+    body.dark-mode .section-title h2{color:#e2e8f0!important;}
+    body.dark-mode .section-title p,body.dark-mode .showcase-sub{color:#94a3b8!important;}
+    body.dark-mode .project-kicker{background:#1e3a6e!important;color:#93c5fd!important;}
+    body.dark-mode .meta-pill{background:rgba(30,41,59,.8)!important;border-color:#2d4a6e!important;color:#94a3b8!important;}
+    body.dark-mode .card-title{color:#e2e8f0!important;}
+    body.dark-mode .icon-chip{background:#1e3a6e!important;color:#60a5fa!important;}
+    body.dark-mode .info-list li{color:#94a3b8!important;border-bottom-color:#2d4a6e!important;}
+    body.dark-mode .info-list strong{color:#e2e8f0!important;}
+    body.dark-mode .doc-link{background:rgba(20,32,58,.8)!important;border-color:#2d4a6e!important;color:#94a3b8!important;}
+    body.dark-mode .doc-link:hover{background:#1e293b!important;color:#60a5fa!important;}
+    body.dark-mode .text-card h3{color:#e2e8f0!important;}
+    body.dark-mode .text-card p{color:#94a3b8!important;}
+    body.dark-mode .highlight-card h4{color:#e2e8f0!important;}
+    body.dark-mode .highlight-card p{color:#94a3b8!important;}
+    body.dark-mode .comment-emphasis{background:rgba(20,40,80,.7)!important;border-color:#2d4a6e!important;color:#93c5fd!important;}
+    body.dark-mode .device-frame{background:#111827!important;border-color:#2d4a6e!important;}
+    body.dark-mode .showcase-title{color:#e2e8f0!important;}
+    body.dark-mode a{color:#60a5fa!important;}
   </style>
 </head>
 
@@ -204,17 +231,12 @@
   </main>
 
   <div id="preloader"></div>
+  <button id="theme-toggle" class="theme-toggle" title="다크모드 전환"><i class="bi bi-moon-stars-fill"></i></button>
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.min.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/js/main.js"></script>
 </body>
 
