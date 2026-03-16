@@ -2171,3 +2171,41 @@ body.dark-mode #footer h3 {
 body.dark-mode #footer p {
   color: #64748b !important;
 }
+
+/*--------------------------------------------------------------
+# Small screen fixes (max 480px)
+--------------------------------------------------------------*/
+@media (max-width: 480px) {
+  #hero h1 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  #hero p {
+    font-size: 16px;
+  }
+
+  #hero .container {
+    padding: 24px 20px !important;
+  }
+
+  .section-title h2 {
+    font-size: 24px !important;
+  }
+
+  .skill-card,
+  .value-card,
+  .project-card,
+  .info-box {
+    padding: 16px !important;
+  }
+
+  .project-contribution {
+    padding: 12px 14px;
+  }
+
+  .contribution-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
