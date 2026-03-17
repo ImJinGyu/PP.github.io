@@ -23,6 +23,31 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+    /* ── Vibe Coding panel (portfolio section) ── */
+    .vibe-panel-index{padding:8px 0;}
+    .vibe-header-index{text-align:center;margin-bottom:22px;}
+    .vibe-badge-index{display:inline-flex;align-items:center;gap:8px;padding:8px 18px;border-radius:999px;background:linear-gradient(135deg,#ede9fe,#ddd6fe);color:#6d28d9;font-size:13px;font-weight:700;margin-bottom:14px;}
+    .vibe-header-index h3{font-size:22px;color:#243a55;margin-bottom:8px;}
+    .vibe-header-index p{color:#566a83;font-size:14px;line-height:1.75;margin:0;}
+    .vibe-grid-index{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:0;}
+    .vibe-item-index{background:rgba(255,255,255,.75);border:1px solid #e4d9ff;border-radius:16px;padding:18px;}
+    .vibe-icon-index{width:36px;height:36px;border-radius:10px;background:#ede9fe;color:#7c3aed;display:flex;align-items:center;justify-content:center;font-size:18px;margin-bottom:10px;}
+    .vibe-item-index h4{font-size:14px;font-weight:700;color:#243a55;margin-bottom:6px;}
+    .vibe-item-index p{font-size:13px;color:#566a83;line-height:1.65;margin:0;}
+    .vibe-item-index code{background:#ede9fe;color:#6d28d9;padding:1px 5px;border-radius:5px;font-size:12px;}
+    @media(max-width:991px){.vibe-grid-index{grid-template-columns:repeat(2,1fr);}}
+    @media(max-width:576px){.vibe-grid-index{grid-template-columns:1fr;}}
+    /* dark mode */
+    body.dark-mode .vibe-header-index h3{color:#e2e8f0;}
+    body.dark-mode .vibe-header-index p{color:#94a3b8;}
+    body.dark-mode .vibe-badge-index{background:rgba(109,40,217,.25);color:#c4b5fd;}
+    body.dark-mode .vibe-item-index{background:rgba(30,41,59,.9);border-color:#3b2f6e;}
+    body.dark-mode .vibe-icon-index{background:rgba(109,40,217,.25);color:#a78bfa;}
+    body.dark-mode .vibe-item-index h4{color:#e2e8f0;}
+    body.dark-mode .vibe-item-index p{color:#94a3b8;}
+    body.dark-mode .vibe-item-index code{background:rgba(109,40,217,.2);color:#c4b5fd;}
+  </style>
 </head>
 
 <body>
@@ -510,7 +535,6 @@
                 <li><strong>Pattern:</strong> MVC 기반 구조, 역할 분리, 유지보수 고려</li>
                 <li><strong>Data Flow:</strong> UI → Controller → Service → DB / API</li>
                 <li><strong>Focus:</strong> 운영 안정성, 오류 추적, 쿼리 성능, 공통화</li>
-                <li><strong>Mindset:</strong> 동작하는 코드보다 오래 사용할 수 있는 코드</li>
               </ul>
             </div>
           </div>
@@ -528,7 +552,8 @@
         <div class="row">
           <div class="col-lg-12 d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
             <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">Featured</li>
+              <li data-filter=".filter-featured" class="filter-active">Featured</li>
+              <li data-filter=".filter-vibe"><i class="bi bi-stars" style="margin-right:5px;color:#7c3aed;"></i>Vibe Coding</li>
             </ul>
           </div>
         </div>
@@ -575,6 +600,53 @@
                 일부 기능 오류를 수정하여 Cafe24 실서버에 개인적으로 재배포하며
                 레거시 프로젝트를 최신 환경으로 개선하는 경험도 진행했습니다.
               </p>
+            </div>
+          </div>
+          <div class="col-lg-12 portfolio-item filter-vibe">
+            <div class="featured-project-panel">
+              <div class="vibe-panel-index">
+                <div class="vibe-header-index">
+                  <div class="vibe-badge-index"><i class="bi bi-stars"></i> Vibe Coding with Claude Code</div>
+                  <h3>AI와 함께한 부산온나 개선</h3>
+                  <p>
+                    부산온나 프로젝트는 Anthropic의 <strong>Claude Code (claude-sonnet-4-6)</strong>를 활용한
+                    바이브코딩 방식으로 레거시 구조를 분석하고 SpringBoot 환경으로 개선했습니다.<br>
+                    직접 코드를 작성하는 대신, AI와 대화하며 마이그레이션 요구사항을 전달하고 함께 구현하는 방식으로 진행했습니다.
+                  </p>
+                </div>
+                <div class="vibe-grid-index">
+                  <div class="vibe-item-index">
+                    <div class="vibe-icon-index"><i class="bi bi-arrow-repeat"></i></div>
+                    <h4>Spring Boot 마이그레이션</h4>
+                    <p>레거시 Spring MVC XML 설정(<code>web.xml</code>, <code>root-context.xml</code>, <code>servlet-context.xml</code>)을 Spring Boot Java Config 방식으로 전환하고 <code>BusanOnApplication</code> 진입점 추가</p>
+                  </div>
+                  <div class="vibe-item-index">
+                    <div class="vibe-icon-index"><i class="bi bi-sliders"></i></div>
+                    <h4>설정 외부화</h4>
+                    <p>DB·메일·JSP·업로드 경로 설정을 <code>application.properties</code>로 이전. 하드코딩된 Windows 절대경로를 설정값으로 교체하여 환경에 상관없이 실행 가능하도록 개선</p>
+                  </div>
+                  <div class="vibe-item-index">
+                    <div class="vibe-icon-index"><i class="bi bi-tools"></i></div>
+                    <h4>IDE 호환성 개선</h4>
+                    <p>Eclipse·STS 전용 메타데이터를 제거하고 IntelliJ에서 Maven 프로젝트로 바로 열 수 있도록 구조 정리. Java 17 기반 환경으로 전환</p>
+                  </div>
+                  <div class="vibe-item-index">
+                    <div class="vibe-icon-index"><i class="bi bi-bug"></i></div>
+                    <h4>오류 수정 및 기능 안정화</h4>
+                    <p>마이그레이션 후 SQL Mapper·JSP 경로·외부 API 연동 등에서 발생한 오류를 분석하고 수정. 기존 Controller·Service·DAO·MyBatis 구조는 최대한 유지하며 안정화</p>
+                  </div>
+                  <div class="vibe-item-index">
+                    <div class="vibe-icon-index"><i class="bi bi-cloud-upload"></i></div>
+                    <h4>실서버 재배포</h4>
+                    <p>개선된 SpringBoot 프로젝트를 Cafe24 실서버에 직접 배포. 레거시 프로젝트를 최신 환경으로 이전하고 운영 가능한 형태로 복원하는 전 과정 경험</p>
+                  </div>
+                  <div class="vibe-item-index">
+                    <div class="vibe-icon-index"><i class="bi bi-robot"></i></div>
+                    <h4>Vibe Coding 방식이란?</h4>
+                    <p>코드를 직접 작성하는 대신 AI에게 요구사항과 의도를 설명하고, AI가 분석·계획·구현을 담당하는 협업 개발 방식. 레거시 분석과 마이그레이션처럼 복잡한 작업에 효과적</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
