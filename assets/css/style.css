@@ -2258,6 +2258,10 @@ body.dark-mode .note-link-icon-btn { background: rgba(56,189,248,.15); color: #7
 body.dark-mode .note-link-icon-btn:hover { background: rgba(56,189,248,.25); color: #bae6fd !important; }
 body.dark-mode .note-link-text-btn { background: rgba(56,189,248,.12); color: #7dd3fc !important; border: 1px solid rgba(56,189,248,.2); box-shadow: none; }
 body.dark-mode .note-link-text-btn:hover { background: rgba(56,189,248,.22); color: #bae6fd !important; box-shadow: none; }
+.busanon-link-btn { background: linear-gradient(135deg, #a855f7, #7c3aed) !important; box-shadow: 0 3px 10px rgba(124,58,237,.35) !important; }
+.busanon-link-btn:hover { background: linear-gradient(135deg, #9333ea, #6d28d9) !important; box-shadow: 0 5px 14px rgba(124,58,237,.5) !important; }
+body.dark-mode .busanon-link-btn { background: rgba(168,85,247,.15) !important; color: #c084fc !important; border: 1px solid rgba(168,85,247,.3) !important; box-shadow: none !important; }
+body.dark-mode .busanon-link-btn:hover { background: rgba(168,85,247,.28) !important; color: #e9d5ff !important; box-shadow: none !important; }
 .note-screenshots-swiper { border-radius: 12px; overflow: hidden; box-shadow: 0 8px 24px rgba(14,165,233,.2); }
 .note-screenshot-img { width: 100%; height: 220px; object-fit: cover; object-position: top; display: block; }
 .note-swiper-prev, .note-swiper-next { width: 28px !important; height: 28px !important; background: rgba(255,255,255,.9); border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,.15); }
