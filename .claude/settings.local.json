@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(\"C:\\\\Users\\\\LJG\\\\Documents\\\\GitHub\\\\portfolio\\\\assets\\\\css\\\\style.css\":*)",
+      "Bash(\"C:/Users/LJG/Documents/GitHub/portfolio/assets/css/style.css\")",
+      "Bash(python \"C:\\\\Users\\\\LJG\\\\Documents\\\\GitHub\\\\portfolio\\\\swap_panels.py\")",
+      "Bash(python swap_panels.py)",
+      "Bash(where python:*)",
+      "Bash(where py:*)",
+      "Bash(where python3:*)",
+      "Bash(\"C:\\\\Users\\\\LJG\\\\AppData\\\\Local\\\\Microsoft\\\\WindowsApps\\\\python.exe\" swap_panels.py)"
+    ]
+  }
+}
